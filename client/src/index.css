@@ -899,7 +899,7 @@ a:hover {
 }
 
 .text-light {
-  color: #e98708 !important;
+  color:#000000d6 !important;
 }
 
 .text-dark {
@@ -920,7 +920,7 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #103a32 !important;
+  background-color: #005565de !important;
 }
 
 .bg-info {
@@ -1035,7 +1035,7 @@ a:hover {
 }
 
 .btn.btn-info {
-  background-color: #1bbc9b;
+  background-color: #05137a;
   color: #ffffff;
 }
 
