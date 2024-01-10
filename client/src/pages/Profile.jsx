@@ -8,7 +8,8 @@ import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
 
-// Profile 
+
+// Profile
 const Profile = () => {
   const { username: userParam } = useParams();
 
@@ -32,11 +33,12 @@ const Profile = () => {
   if (!user?.username) {
     return (
       <h4>
-        You need to be logged in to see this. Use the navigation links above to
+        Please login to see this. Use the navigation links above to
         sign up or log in!
       </h4>
     );
   }
+
 
   return (
     <div>
@@ -51,7 +53,9 @@ const Profile = () => {
             title={`${user.username}'s thoughts...`}
             showTitle={false}
             showUsername={false}
+ 
           />
+
         </div>
         {!userParam && (
           <div
