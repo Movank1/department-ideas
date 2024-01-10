@@ -14,10 +14,7 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <h4>
 
-          Teamwork; communication are the key of success.
-        </h4>
       </div>
     </footer>
   );
