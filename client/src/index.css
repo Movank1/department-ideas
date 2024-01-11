@@ -920,7 +920,7 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #005565de !important;
+  background-color: #7ac8de !important;
 }
 
 .bg-info {
@@ -1017,8 +1017,10 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
+  background-color: #023353;
   color: #d9e9e8;
+  font-size: x-large;
+  font-weight: 500;
 }
 
 .btn.btn-primary:hover {
