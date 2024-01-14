@@ -39,6 +39,22 @@ export const ADD_THOUGHT = gql`
   }
 `;
 
+
+
+
+export const DELETE_THOUGHT = gql`
+
+  mutation removeThought($thoughtId: ID! ) {
+    removeThought(thoughtId: $thoughtId) {
+      _id
+    }
+  }
+`;
+
+
+
+
+
 export const ADD_COMMENT = gql`
   mutation addComment($thoughtId: ID!, $commentText: String!) {
     addComment(thoughtId: $thoughtId, commentText: $commentText) {
@@ -56,6 +72,7 @@ export const ADD_COMMENT = gql`
 `;
 
 export const DELETE_COMMENT = gql`
+
   mutation removeComment($thoughtId: ID!, $commentId: ID!) {
     removeComment(thoughtId: $thoughtId, commentId: $commentId) {
       _id

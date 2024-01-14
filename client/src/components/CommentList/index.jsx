@@ -29,29 +29,30 @@ const CommentList = ({ thoughtId, comments = [] }) => {
                     on {comment.createdAt}
                   </span>
 
-                  
-
-                  <button onClick={() => {
-
-                      deleteComment({
-                        variables: {
-                          thoughtId,
-                          commentId: comment._id
-                        }
-                      }).then(() => {
-                        console.log('reload page or refetch comments');
-                        window.location.reload();
-                      }).catch((err) => {
-                        console.log(err);
-                      });
-
-                  }}>delete</button>
-
-
-
-                  
+          
                 </h5>
                 <p className="card-body">{comment.commentText}</p>
+
+
+                  <button  onClick={() => {
+
+                 deleteComment({
+                 variables: {
+                 thoughtId,
+                 commentId: comment._id
+                            }
+                 }).then(() => {
+                 console.log('reload page or refetch comments');
+                 window.location.reload();
+                 }).catch((err) => {
+                  console.log(err);
+                 });
+
+                  }} 
+
+                 class="btn btn-primary btn-block py-1" type="submit" >delete</button>
+
+
               </div>
             </div>
           ))}
