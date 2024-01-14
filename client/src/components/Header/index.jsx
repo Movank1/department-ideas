@@ -20,9 +20,6 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-
-
-
               <button className="btn btn-sm btn-light m-2" onClick={logout}>
                 Logout
               </button>
