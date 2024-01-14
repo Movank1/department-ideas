@@ -360,7 +360,7 @@ body {
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 16px;
-  color: #1a1a1a;
+  color: white;
 }
 
 h1,
@@ -369,13 +369,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: math;
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 3.25rem;
 }
 
 h2 {
@@ -402,6 +402,7 @@ p {
   font-size: 1.1rem;
   margin: 0 0 1rem;
   line-height: 1.5;
+  color: #11e3db;
 }
 
 ul,
@@ -501,7 +502,7 @@ a:hover {
 }
 
 .mb-3 {
-  margin-bottom: 1rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .mb-4 {
@@ -685,7 +686,7 @@ a:hover {
 }
 
 .p-2 {
-  padding: 0.625rem !important;
+  padding: 1.625rem !important;
 }
 
 .p-3 {
@@ -899,7 +900,7 @@ a:hover {
 }
 
 .text-light {
-  color: #e98708 !important;
+  color:white !important;
 }
 
 .text-dark {
@@ -933,11 +934,11 @@ a:hover {
 }
 
 .bg-light {
-  background-color: #d9e9e8 !important;
+  background-color: #103a32 !important;
 }
 
 .bg-dark {
-  background-color: #1bbc9b !important;
+  background-color: #063e32e3 !important;
   box-shadow: 
     12px 12px 16px 0 rgba(0, 0, 0, 0.25),
     -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
@@ -992,6 +993,8 @@ a:hover {
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
+
+
 .btn:hover {
   background-color: #cecece;
 }
@@ -1017,7 +1020,7 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
+  background-color: #3f4c26;
   color: #d9e9e8;
 }
 
@@ -1044,7 +1047,7 @@ a:hover {
 }
 
 .btn.btn-light {
-  background-color: #d9e9e8;
+  background-color: #1999d5;
   color: #1a1a1a;
 }
 
@@ -1152,11 +1155,11 @@ form .form-input {
   width: 100%;
   padding: 0.75rem;
   color: #1a1a1a;
-  background-color: #a5dbba;
+  background-color: white;
   margin: 0.625rem 0;
   font-size: 1.2rem;
   border: 1px solid #484848;
-  border-radius: 0.3rem;
+  border-radius: 1rem;
 }
 
 form .form-input.form-input-squared {
@@ -1174,7 +1177,7 @@ label form [type='radio'] {
 }
 
 .container {
-  width: 85%;
+  width: 65%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -1195,6 +1198,7 @@ label form [type='radio'] {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: #0e5245;
 }
 
 .flex-wrap {
@@ -1335,6 +1339,7 @@ label form [type='radio'] {
 .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
+  background-color: #0e5245;
 }
 
 /* col-sm */

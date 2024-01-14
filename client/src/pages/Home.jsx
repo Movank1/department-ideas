@@ -4,6 +4,7 @@ import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
+import Auth from '../utils/auth';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
@@ -18,17 +19,41 @@ const Home = () => {
         >
           <ThoughtForm />
         </div>
+
+
+
+
         <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
+
+
+
+
+
+
+          {Auth.loggedIn() ? (
+            <>
+              {loading ? (
+                <div>Loading...</div>
+              ) : (
+                <ThoughtList
+                  thoughts={thoughts}
+                  title="Project Idea"
+                />
+              )}
+            </>
           ) : (
-            <ThoughtList
-              thoughts={thoughts}
-              title="Some Feed for Thought(s)..."
-            />
-          )}
+            <>
+              <h2>Login to see some thoguhts.</h2>
+            </>
+            
+            
+          )}     
+
         </div>
+
+        
       </div>
+      
     </main>
   );
 };

@@ -77,9 +77,8 @@ const ThoughtForm = () => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Thought
-              </button>
+
+               <button class="uk-button uk-button-default btn btn-primary btn-block py-3">Add Thought</button>
             </div>
             {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">

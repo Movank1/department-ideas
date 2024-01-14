@@ -7,6 +7,7 @@ import CommentForm from '../components/CommentForm';
 
 import { QUERY_SINGLE_THOUGHT } from '../utils/queries';
 
+
 const SingleThought = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { thoughtId } = useParams();
@@ -21,6 +22,9 @@ const SingleThought = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+
+
+
   return (
     <div className="my-3">
       <h3 className="card-header bg-dark text-light p-2 m-0">
@@ -44,10 +48,12 @@ const SingleThought = () => {
       </div>
 
       <div className="my-5">
-        <CommentList comments={thought.comments} />
+        <CommentList thoughtId={thought._id} comments={thought.comments} />
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <CommentForm thoughtId={thought._id} />
+
+
       </div>
     </div>
   );

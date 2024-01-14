@@ -12,21 +12,22 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">Department Communication App</h1>
+           
+            <h1 class="uk-heading-line uk-text-center"><span>Department Communication App</span></h1>
           </Link>
-          <p className="m-0">Please post your project idea and get comment, suggestion and help.</p>
+       
         </div>
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/me">
-                {/* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username  */}
-                {Auth.getProfile().authenticatedPerson.username}'s profile
-              </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+
+
+
+              <button className="btn btn-sm btn-light m-2" onClick={logout}>
                 Logout
               </button>
             </>
+            
           ) : (
             <>
               <Link className="btn btn-lg btn-info m-2" to="/login">
@@ -36,6 +37,7 @@ const Header = () => {
                 Signup
               </Link>
             </>
+            
           )}
         </div>
       </div>

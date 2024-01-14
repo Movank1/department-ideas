@@ -1,7 +1,14 @@
-const CommentList = ({ comments = [] }) => {
+import { useMutation } from '@apollo/client';
+import { DELETE_COMMENT } from '../../utils/mutations';
+
+
+const CommentList = ({ thoughtId, comments = [] }) => {
+
   if (!comments.length) {
     return <h3>No Comments Yet</h3>;
   }
+
+  const [deleteComment, { error, data }] = useMutation(DELETE_COMMENT);
 
   return (
     <>
@@ -21,8 +28,31 @@ const CommentList = ({ comments = [] }) => {
                   <span style={{ fontSize: '0.825rem' }}>
                     on {comment.createdAt}
                   </span>
+
+          
                 </h5>
                 <p className="card-body">{comment.commentText}</p>
+
+
+                  <button  onClick={() => {
+
+                 deleteComment({
+                 variables: {
+                 thoughtId,
+                 commentId: comment._id
+                            }
+                 }).then(() => {
+                 console.log('reload page or refetch comments');
+                 window.location.reload();
+                 }).catch((err) => {
+                  console.log(err);
+                 });
+
+                  }} 
+
+                 class="btn btn-primary btn-block py-1" type="submit" >delete</button>
+
+
               </div>
             </div>
           ))}
