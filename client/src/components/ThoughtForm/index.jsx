@@ -42,7 +42,7 @@ const ThoughtForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'thoughtText' && value.length <= 280) {
+    if (name === 'thoughtText' && value.length <= 500) {
       setThoughtText(value);
       setCharacterCount(value.length);
     }
@@ -56,10 +56,10 @@ const ThoughtForm = () => {
         <>
           <p
             className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
+              characterCount === 500 || error ? 'text-danger' : ''
             }`}
           >
-            Character Count: {characterCount}/280
+            Character Count: {characterCount}/500
           </p>
           <form
             className="flex-row justify-center justify-space-between-md align-center"
