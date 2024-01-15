@@ -79,9 +79,11 @@ const ThoughtForm = () => {
         </form></>
     
       ) : (
-        <h2 class="uk-position-center uk-overlay .uk-text-decoration-none ">
+        <div uk-height-viewport="expand: true">
+          <h2 class="uk-position-center uk-overlay .uk-text-decoration-none ">
           Please <a class=" .uk-text-uppercase" href='/login'> login </a> to share your  idea
         </h2>
+        </div>
       )}
     </div>
   );
