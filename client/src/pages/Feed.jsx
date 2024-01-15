@@ -6,7 +6,7 @@ import ThoughtForm from '../components/ThoughtForm';
 import { QUERY_THOUGHTS } from '../utils/queries';
 import Auth from '../utils/auth';
 
-const Home = () => {
+const Feed = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const thoughts = data?.thoughts || [];
 
@@ -15,7 +15,7 @@ const Home = () => {
       <div className="flex-row justify-center">
         <div
           className="col-12 col-md-15 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
+          style={{ border: '1px dotted #1a1a1a',  }}
         >
           <ThoughtForm />
         </div>
@@ -43,8 +43,6 @@ const Home = () => {
             </>
           ) : (
             <>
-            {/* new code for not logged in */}
-              <h2>Login to see some thoguhts.</h2>
             </>
             
             
@@ -59,4 +57,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Feed;

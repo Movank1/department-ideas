@@ -50,48 +50,40 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <h3>Please post your project idea and get comment, suggestion and help?</h3>
 
       {Auth.loggedIn() ? (
-        <>
-          <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
-          >
-            Character Count: {characterCount}/280
-          </p>
+          <>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
-            onSubmit={handleFormSubmit}
-          >
-            <div className="col-12 col-lg-9">
-              <textarea
-                name="thoughtText"
-                placeholder="Here's a new thought..."
-                value={thoughtText}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
-                onChange={handleChange}
-              ></textarea>
-            </div>
+          className="flex-row justify-center justify-space-between-md align-center"
+          onSubmit={handleFormSubmit}>
+          <div className="col-12 col-lg-9">
+            <textarea
+              name="thoughtText"
+              placeholder="Here's a new thought..."
+              value={thoughtText}
+              className="form-input w-100"
+              style={{ lineHeight: '1.5', resize: 'vertical' }}
+              onChange={handleChange}
+            ></textarea>
+          </div>
 
-            <div className="col-12 col-lg-3">
+          <div className="col-12 col-lg-3">
 
-               <button class="uk-button uk-button-default btn btn-primary btn-block py-3">Add Thought</button>
+            <button class="uk-button uk-button-default btn btn-primary btn-block py-3">Add Thought</button>
+          </div>
+          {error && (
+            <div className="col-12 my-3 bg-danger text-white p-3">
+              {error.message}
             </div>
-            {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
-                {error.message}
-              </div>
-            )}
-          </form>
-        </>
+          )}
+        </form></>
+    
       ) : (
-        <p>
-          Please login to share your project idea{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
-        </p>
+        <div uk-height-viewport="expand: true">
+          <h2 class="uk-position-center uk-overlay .uk-text-decoration-none ">
+          Please <a class=" .uk-text-uppercase" href='/login'> login </a> to share your  idea
+        </h2>
+        </div>
       )}
     </div>
   );
