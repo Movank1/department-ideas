@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="bg-primary text-light mb-4 py-3 flex-row align-center justify-space-around">
-        <div><img src="../../icon.png" alt="Company Logo" /></div>
+        <div><img src="../../../src/assets/images/icon.png" alt="Company Logo" /></div>
         <div>
           <Link className="text-light" to="/">
             <h1 className=""><span>Dept. Communication</span></h1>
