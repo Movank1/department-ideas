@@ -16,13 +16,19 @@ const ThoughtList = ({
   const [deleteThought, { error, data }] = useMutation(DELETE_THOUGHT);
 
   return (
+    
     <div>
       {showTitle && <h3>{title}</h3>}
       {thoughts &&
         thoughts.map((thought) => (
           <div key={thought._id} className="card mb-3">
+
+        <p>{thought.thoughtText}</p>
+
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (
+
+                
                 <Link
                   className="text-light"
                   to={`/profiles/${thought.thoughtAuthor}`}
@@ -41,7 +47,9 @@ const ThoughtList = ({
               )}
             </h4>
             <div className="card-body bg-light p-2">
-              <p>{thought.thoughtText}</p>
+              
+              
+
 
 
 
@@ -74,6 +82,9 @@ const ThoughtList = ({
             >
               Join the discussion on this thought.
             </Link>
+
+
+            
           </div>
         ))}
     </div>

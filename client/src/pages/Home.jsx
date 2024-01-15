@@ -43,7 +43,7 @@ const Home = () => {
             </>
           ) : (
             <>
-              <h2>Login to see some thoguhts.</h2>
+              <h2>Login to see some Thought.</h2>
             </>
             
             

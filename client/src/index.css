@@ -387,7 +387,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
 }
 
 h5 {
@@ -403,6 +403,7 @@ p {
   margin: 0 0 1rem;
   line-height: 1.5;
   color: #11e3db;
+  background-color: #103a32;
 }
 
 ul,
@@ -1094,6 +1095,7 @@ a:hover {
 .card {
   border: 1px solid #1a1a1a;
   margin-bottom: 1rem;
+  background-color: #103a32;
 }
 
 .card .card-header {

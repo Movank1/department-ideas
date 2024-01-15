@@ -34,7 +34,7 @@ const CommentForm = ({ thoughtId }) => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'commentText' && value.length <= 280) {
+    if (name === 'commentText' && value.length <= 500) {
       setCommentText(value);
       setCharacterCount(value.length);
     }
@@ -48,10 +48,10 @@ const CommentForm = ({ thoughtId }) => {
         <>
           <p
             className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
+              characterCount === 500 || error ? 'text-danger' : ''
             }`}
           >
-            Character Count: {characterCount}/280
+            Character Count: {characterCount}/500
             {error && <span className="ml-2">{error.message}</span>}
           </p>
           <form
