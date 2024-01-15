@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Error from './pages/Error';
+import Feed from './pages/Feed';
 
 // Define routes
 const routes = [
@@ -23,6 +24,7 @@ const routes = [
       { path: '/me', element: <Profile /> },
       { path: '/profiles/:profileId', element: <Profile /> },
       { path: '/thoughts/:thoughtId', element: <SingleThought /> },
+      { path: '/feed', element: <Feed /> },
     ],
   },
 ];
