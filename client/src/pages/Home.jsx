@@ -43,6 +43,7 @@ const Home = () => {
             </>
           ) : (
             <>
+            {/* new code for not logged in */}
               <h2>Login to see some thoguhts.</h2>
             </>
             
